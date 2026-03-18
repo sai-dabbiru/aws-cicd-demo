@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      # Old OpenSSL — Inspector will flag CVE-2016-2183
+      - yum install -y openssl-1.0.2k-fips
+  build:
+    commands:
+      - mkdir -p html
+      - echo "<h1>Demo App - Vulnerable Build</h1>" > html/index.html
+      - zip -r app.zip . --exclude "*.git*"
+artifacts:
+  files:
+    - app.zip
+    - appspec.yml
+    - scripts/**/*
