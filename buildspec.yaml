@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       # Old OpenSSL — Inspector will flag CVE-2016-2183
-      - yum install -y openssl-1.0.2k-fips
+      - dnf install -y openssl-3.0.7
   build:
     commands:
       - mkdir -p html
