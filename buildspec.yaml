@@ -4,6 +4,8 @@ phases:
     commands:
       # Old OpenSSL — Inspector will flag CVE-2016-2183
       - dnf install -y openssl-3.0.7
+      - dnf install -y python3-pip
+      - pip3 install cryptography==36.0.0 
   build:
     commands:
       - mkdir -p html
