@@ -4,7 +4,9 @@ phases:
     commands:
       - mkdir -p html
       - echo "<h1>Demo App - Vulnerable Build</h1>" > html/index.html
-      - zip -r app.zip html/ appspec.yml scripts/
 artifacts:
   files:
-    - app.zip
+    - appspec.yml
+    - scripts/**/*
+    - html/**/*
+  discard-paths: no
