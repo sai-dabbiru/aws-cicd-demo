@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /html
-    destination: /usr/share/nginx/html
+  - source: /
+    destination: /var/www/app
 hooks:
   BeforeInstall:
     - location: scripts/install.sh
