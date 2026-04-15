@@ -3,7 +3,7 @@ phases:
   build:
     commands:
       - mkdir -p html
-      - echo "<h1>Build 2</h1>" > html/index.html
+      - echo "<h1>Build 3</h1>" > html/index.html
 artifacts:
   files:
     - appspec.yml
